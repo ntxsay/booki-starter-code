@@ -63,6 +63,101 @@ a {
     color: var(--main-bg-color)
 }
 
+/**** Header ****/
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+#logo {
+    padding: 30px 50px;
+    width: 61px;
+}
+
+.nav-container .nav-items-container ul {
+  list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 68px;
+    margin:0;
+}
+
+.nav-container .nav-items-container ul li {
+    margin-left: 20px;
+    padding-top: 16px;
+    font-size: 16px;
+}
+
+.nav-container .nav-items-container ul li.selected {
+    border-top: 2px solid var(--main-color);
+} 
+
+/**** Finder et filter ****/
+.finder-and-filter-container {
+    padding: 0;
+}
+
+.finder-title {
+}
+
+.finder-title p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.finder-form {
+    margin: 15px 0;
+}
+
+.finder-form .finder-form-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0; /* Espacement entre les éléments */
+    justify-content: left;
+}
+
+.finder-form .finder-search-label {
+    border: 1px solid var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    font-size: 18px;
+    color: black;
+    padding: 15px 16px;
+    border-radius: 20px 0 0 20px;
+
+}
+
+.finder-form .finder-search-label i.fa-solid {
+    color: black;
+}
+
+.finder-form .finder-search-input {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments enfants */
+    justify-content: center; /* Centre horizontalement les éléments enfants */
+    border: 1px solid var(--main-bg-color);
+}
+
+input#finder {
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+}
+
+#finder-submit {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid var(--main-color);
+    border-radius: 0 20px 20px 0;
+    padding: 15px 16px;
+    cursor: pointer;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
