@@ -353,6 +353,39 @@ ul.filter-items-container .filter-item-content i
     display: flex;
 }
 
+/**** Footer ****/
+footer {
+    margin-top: 35px;
+}
+.footer-nav-container {
+    background-color: var(--main-bg-color);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:15px;
+    justify-content: start;
+}
+
+.footer-nav-container .footer-item-title span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-nav-container ul.footer-item-content {
+    list-style: none;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.footer-nav-container ul.footer-item-content li {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.footer-nav-container ul.footer-item-content li a {
+    text-decoration: none;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
