@@ -36,8 +36,11 @@ a {
 }
 
 .section-display-more {
+    display: block;
     font-size: 18px;
-    margin-top: 33px;
+    margin-top: 30px;
+    margin-bottom: 2.5px;
+    font-weight: 700;
 }
 
 .card {
@@ -102,19 +105,19 @@ a {
 /**** Finder et filter ****/
 .finder-and-filter-container {
     padding: 0;
-    margin-bottom: 35px;
+    margin: 30px 0 35px 0;
 }
 
 .finder-title {
 }
 
 .finder-title p {
-    margin: 8px 0;
+    margin-top: 8px;
     font-size: 16px;
 }
 
 .finder-form {
-    margin: 15px 0;
+    margin: 35px 0;
 }
 
 .finder-form .finder-form-content {
@@ -164,17 +167,19 @@ button#finder-submit {
     cursor: pointer;
 }
 
-.filter-container .filter-title {
-    font-size: 18px;
-    font-weight: 700;
-    vertical-align: center;
-}
-
 .filter-container {
     display: flex;
     justify-content: left;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filter-container .filter-title {
+    font-size: 18px;
+    font-weight: 700;
+    vertical-align: center;
+    margin-right: 15px;
 }
 
 .filter-container ul.filter-items-container {
@@ -182,20 +187,28 @@ button#finder-submit {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 ul.filter-items-container .filter-item-content{
-    padding: 15px 19px;
-    border-radius: 28px;
+    display: flex;
+    padding: 0 16px;
+    border-radius: 25px;
     border: 2px solid #D9d9d9;
+    height: 46px;
+    align-items: center;
 }
+
 ul.filter-items-container .filter-item-content.selected,
 ul.filter-items-container .filter-item-content:hover {
     background-color: #DEEBFF;
 }
 
-ul.filter-items-container .filter-item-content span,
-ul.filter-items-container .filter-item-content i
+ul.filter-items-container .filter-item-content i {
+    font-size: 22px;
+}
+ul.filter-items-container .filter-item-content span
 {
     font-size: 17px;
     font-weight: 700;
@@ -251,11 +264,12 @@ ul.filter-items-container .filter-item-content i
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 30px;
+    row-gap: 30px;
 }
 
 
 .hebergements-cards .card {
-    margin-top: 33px;
     width: 246px;
 }
 
@@ -264,6 +278,7 @@ ul.filter-items-container .filter-item-content i
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    object-fit: cover;
 }
 
 .hebergements-cards .card-content {
@@ -273,6 +288,19 @@ ul.filter-items-container .filter-item-content i
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+}
+
+.hebergements-cards .card-content .card-title {
+    margin: 4px 0 0 0;
+}
+
+.hebergements-cards .card-content p.card-subtitle {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.hebergements-cards .card-content .card-rating {
+    font-size: 14px;
 }
 
 /****** Populaires ***********/
@@ -286,9 +314,17 @@ ul.filter-items-container .filter-item-content i
     align-items: center;
 }
 
+.populaires-cards {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    gap: 30px;
 }
 
 .populaires-cards img {
@@ -322,9 +358,8 @@ ul.filter-items-container .filter-item-content i
 
 /***** Activités *****/
 .activities {
-    border-radius: 20px;
     padding: 30px;
-    margin-top: 50px;
+    margin-top: 35px;
     box-sizing: border-box;
 }
 
@@ -333,10 +368,11 @@ ul.filter-items-container .filter-item-content i
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 30px;
 }
 
 .activities-cards .card {
-    width: 298px;
+    width: 297.5px;
     padding: 0;
 }
 
@@ -425,5 +461,130 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    body {
+        margin: 0;
+    }
+    
+    .main-container {
+        padding: 0;
+    }
+
+    /**** Header ****/
+
+    .nav-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0; /* Espacement entre les éléments */
+        justify-content: center !important;
+        align-items: stretch;
+    }
+
+    .nav-container .nav-logo-container {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+
+    }
+    
+    .nav-items-container ul {
+        padding-left: 0;
+        justify-content: center !important;
+    }
+
+    /**** Finder et Filter ****/
+    
+    .finder-and-filter-container {
+        padding: 0 20px;
+    }
+    
+    /**** Filter ****/
+    .filter-container {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    ul.filter-items-container li {
+        flex-grow: 1;
+    }
+
+    ul.filter-items-container .filter-item-content i
+    {
+        font-size: 22px;
+    }
+
+    /**** Hebergements et Populaires ****/
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding-left:0;
+    }
+
+    /**** Populaires ****/
+    
+    .populaires {
+        width: 100%;
+        padding: 30px 20px !important;
+        margin-top: 0;
+        border-radius: 0 !important;
+    }
+    
+    .populaires .populaires-cards {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .populaires .populaires-cards a,
+    .populaires .populaires-cards a .card {
+        width: 100%;
+    }
+
+    /**** Hebergements ****/
+
+    .hebergements {
+        width: 100%;
+        background-color: transparent !important;
+        padding: 30px 20px !important;
+        margin-top: 15px;
+    }
+
+    .hebergements .hebergements-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hebergements .hebergements-cards .card {
+        width: 100%;
+    }
+
+    /**** Activités ****/
+
+    .activities {
+        margin-top: 35px;
+        box-sizing: border-box;
+    }
+
+    .activities .activities-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activities-cards .card {
+        width: 100%;
+        padding: 0;
+    }
+
+    .activities-cards img {
+        width: 100%;
+        height: 141px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
 }
