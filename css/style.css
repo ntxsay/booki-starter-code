@@ -329,13 +329,13 @@ ul.filter-items-container .filter-item-content i
 }
 
 .activities-cards {
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .activities-cards .card {
-    margin-top: 33px;
     width: 298px;
     padding: 0;
 }
