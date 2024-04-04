@@ -319,12 +319,12 @@ ul.filter-items-container .filter-item-content span
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
+    row-gap: 30px;
 }
 
 .populaires-cards .card {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 .populaires-cards img {
@@ -336,7 +336,7 @@ ul.filter-items-container .filter-item-content span
 
 .populaires-cards .card-content {
     width: 67%;
-    padding-left: 15px;
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -443,11 +443,11 @@ footer {
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 32.39%;
     }
 
     .populaires-cards .card-title {
