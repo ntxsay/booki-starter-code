@@ -146,7 +146,7 @@ a {
 .finder-form .finder-search-input {
     display: flex;
     align-items: center; /* Centre verticalement les éléments enfants */
-    justify-content: center; /* Centre horizontalement les éléments enfants */
+    justify-content: stretch; /* Centre horizontalement les éléments enfants */
     border: 1px solid var(--main-bg-color);
 }
 
@@ -167,6 +167,14 @@ button#finder-submit {
     border-radius: 0 20px 20px 0;
     padding: 15px 16px;
     cursor: pointer;
+}
+
+button#finder-submit i {
+    display: none;
+}
+
+button#finder-submit i.fa-solid {
+    color: white;
 }
 
 .filter-container {
@@ -375,7 +383,7 @@ ul.filter-items-container .filter-item-content span
 
 .activities-cards .card {
     width: 297.5px;
-    padding: 0;
+    padding: 0 0 20px 0;
 }
 
 .activities-cards img {
@@ -387,8 +395,11 @@ ul.filter-items-container .filter-item-content span
 
 .activities-cards .card-content {
     width: 100%;
-    padding: 0 15px;
-    display: flex;
+    padding-left: 19px;
+}
+
+.activities-cards .card-content .card-title {
+    margin: 20px 0 0 0;
 }
 
 /**** Footer ****/
@@ -519,6 +530,24 @@ footer {
     .finder-and-filter-container {
         padding: 0 20px;
     }
+
+    .finder-form .finder-form-content {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    button#finder-submit {
+        border-radius: 15px;
+        margin-left: -15px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    button#finder-submit span {
+        display: none;
+    }
+
+    button#finder-submit i {
+        display: inline;
+    }
     
     /**** Filter ****/
     .filter-container {
@@ -561,9 +590,12 @@ footer {
         margin-top: 15px;
     }
 
-    .populaires .populaires-cards a,
-    .populaires .populaires-cards a .card {
+    .populaires .populaires-cards a {
         width: 100%;
+    }
+    
+    .populaires .populaires-cards a .card{
+        width: calc(100% - 10px); /* largueur 100% moins la somme des bordure droite et gauche*/
     }
 
     /**** Hebergements ****/
@@ -581,7 +613,7 @@ footer {
     }
 
     .hebergements .hebergements-cards .card {
-        width: 100%;
+        width: calc(100% - 10px); /* largueur 100% moins la somme des bordure droite et gauche*/
     }
 
     /**** Activités ****/
@@ -598,7 +630,6 @@ footer {
 
     .activities-cards .card {
         width: 100%;
-        padding: 0;
     }
 
     .activities-cards img {
