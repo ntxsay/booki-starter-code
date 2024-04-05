@@ -607,5 +607,12 @@ footer {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
+    
+    /**** Footer ****/
+    .footer-nav-container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        row-gap: 50px;
+    }
 
 }
