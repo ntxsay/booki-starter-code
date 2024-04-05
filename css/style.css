@@ -85,12 +85,14 @@ a {
     justify-content: right;
     gap: 68px;
     margin:0;
+    padding: 0;
 }
 
 .nav-container .nav-items-container ul li {
-    margin-left: 20px;
+    margin:0;
     padding-top: 16px;
     font-size: 16px;
+    font-weight: 400;
 }
 
 .nav-container .nav-items-container ul li a {
@@ -476,7 +478,7 @@ footer {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 0; /* Espacement entre les éléments */
+        gap: 0;
         justify-content: center !important;
         align-items: stretch;
     }
@@ -485,15 +487,34 @@ footer {
         display: flex;
         justify-content: center !important;
         align-items: center;
-
     }
-    
-    .nav-items-container ul {
-        padding-left: 0;
+
+    .nav-container .nav-items-container ul {
         justify-content: center !important;
+        align-items: center;
+        gap: 0;
     }
 
-    /**** Finder et Filter ****/
+    .nav-container .nav-items-container ul li {
+        flex-grow: 1;
+        border-top: none !important;
+        padding-top: 0;
+        padding-bottom: 16px;
+        border-bottom: 2px solid var(--main-bg-color);
+        width: 50%;
+        display: flex;
+    }
+
+    .nav-container .nav-items-container ul li.selected {
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    .nav-container .nav-items-container ul li a {
+        width: 100%;
+        text-align: center;
+    }
+
+        /**** Finder et Filter ****/
     
     .finder-and-filter-container {
         padding: 0 20px;
