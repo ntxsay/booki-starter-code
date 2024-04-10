@@ -606,10 +606,6 @@ ul.footer-item-content li a {
         width: 100%;
     }
 
-    .populaires .populaires-cards a .card {
-        width: calc(100% - 10px); /* largueur 100% moins la somme des bordure droite et gauche*/
-    }
-
     /**** Hebergements ****/
     .hebergements {
         width: 100%;
@@ -624,7 +620,7 @@ ul.footer-item-content li a {
     }
 
     .hebergements-cards a {
-        width: calc(100% - 10px); /* largueur 100% moins la somme des bordure droite et gauche*/
+        width: 100%;
     }
 
     .hebergements .hebergements-cards .card {
@@ -661,6 +657,19 @@ ul.footer-item-content li a {
 
 }
 
+/* Pour les écrans de moins de 400px de large */
+@media (max-width: 400px) {
+
+    ul.filter-items-container .filter-item-content i {
+        font-size: 18px;
+    }
+
+    ul.filter-items-container .filter-item-content span {
+        font-size: 16px;
+    }
+
+}
+
 /* Pour les écrans de moins de 376px de large */
 @media (max-width: 376px){
 
@@ -679,17 +688,4 @@ ul.footer-item-content li a {
     ul.filter-items-container .filter-item-content span {
         font-size: 17px !important;
     }
-}
-
-/* Pour les écrans de moins de 400px de large */
-@media (max-width: 400px) {
-
-    ul.filter-items-container .filter-item-content i {
-        font-size: 18px;
-    }
-
-    ul.filter-items-container .filter-item-content span {
-        font-size: 16px;
-    }
-
 }
