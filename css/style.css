@@ -180,6 +180,7 @@ button#finder-submit i.fa-solid {
     color: white;
 }
 
+/* Div Conteneur contenant le label filtres et les filtres */
 .filter-container {
     display: flex;
     justify-content: left;
@@ -195,6 +196,7 @@ button#finder-submit i.fa-solid {
     margin-right: 15px;
 }
 
+/* Représente la liste des filtres */
 .filter-container ul.filter-items-container {
     list-style: none;
     display: flex;
@@ -204,6 +206,7 @@ button#finder-submit i.fa-solid {
     margin: 0;
 }
 
+/* Représente le conteneur du filtre */
 ul.filter-items-container .filter-item-content {
     display: flex;
     padding: 0 16px;
@@ -218,11 +221,13 @@ ul.filter-items-container .filter-item-content:hover {
     background-color: #DEEBFF;
 }
 
+/* Représente l'icone du filtre */
 ul.filter-items-container .filter-item-content i {
     font-size: 22px;
     margin-right: 8px;
 }
 
+/* Représente le texte du filtre */
 ul.filter-items-container .filter-item-content span {
     font-size: 17px;
     font-weight: 700;
